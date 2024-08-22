@@ -1,3 +1,5 @@
+/* 24:10 */
+
 * {
   /* border: 1px solid plum; */
   margin: 0;
@@ -9,6 +11,14 @@
 }
 
 button {
-    border: initial;
-    background-color: initial;
+  border: initial;
+  background-color: initial;
+  color: inherit;
+  font: inherit;
+}
+
+.app {
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
 }
