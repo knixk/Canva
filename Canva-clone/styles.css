@@ -1,0 +1,14 @@
+* {
+  /* border: 1px solid plum; */
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-image: linear-gradient(to right, #18a0be, #622db9);
+}
+
+button {
+    border: initial;
+    background-color: initial;
+}
