@@ -56,10 +56,13 @@ header {
   height: 100%;
   padding: 10px;
   outline: none;
+  transition: all 0.4s;
+  color: #eaeaea;
 }
 
 header > img {
   margin-right: 10px;
+  animation: fade-in-from-top 0.5s;
 }
 
 .dd-toggle:hover {
@@ -68,4 +71,18 @@ header > img {
 
 .dd-toggle:focus {
   background-color: rgb(255, 255, 255, 0.07);
+}
+
+
+/* KEYFRAMES */
+@keyframes fade-in-from-top {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
 }
