@@ -10,6 +10,7 @@
   background-image: linear-gradient(to right, #18a0be, #622db9);
   display: flex;
   align-items: center;
+  height: 55px;
 }
 
 button {
@@ -58,6 +59,7 @@ header {
   outline: none;
   transition: all 0.4s;
   color: #eaeaea;
+  animation: fade-in-from-top 0.5s;
 }
 
 header > img {
@@ -73,16 +75,41 @@ header > img {
   background-color: rgb(255, 255, 255, 0.07);
 }
 
-
 /* KEYFRAMES */
 @keyframes fade-in-from-top {
   0% {
-      opacity: 0;
-      transform: translateY(-50px);
+    opacity: 0;
+    transform: translateY(-50px);
   }
 
   100% {
-      opacity: 1;
-      transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(0px);
   }
+}
+
+/* ---------------- */
+
+.sidebar {
+  background-color: #10171a;
+  width: 75px;
+}
+
+/* ---------------- */
+
+.panel {
+  background-color: #2b363c;
+  width: 350px;
+}
+
+/* ---------------- */
+
+.main {
+  background-color: #edf1f3;
+  flex: 1;
+}
+
+.app__container {
+  height: calc(100vh - 55px);
+  display: flex;
 }
