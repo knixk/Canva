@@ -60,6 +60,7 @@ header {
   transition: all 0.4s;
   color: #eaeaea;
   animation: fade-in-from-top 0.5s;
+  cursor: pointer;
 }
 
 header > img {
@@ -88,6 +89,18 @@ header > img {
   }
 }
 
+@keyframes fade-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 /* ---------------- */
 
 .sidebar {
@@ -112,4 +125,44 @@ header > img {
 .app__container {
   height: calc(100vh - 55px);
   display: flex;
+}
+
+.menu__button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(140, 148, 150);
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  animation: fade-in-from-left 0.5s;
+  transition: 0.5s;
+}
+
+.menu__button:hover {
+  background-color: #2b363c;
+  color: white;
+}
+
+.menu__button:focus {
+  color: white;
+  background-color: #2b363c;
+}
+
+.menu__icon {
+  margin-bottom: 10px;
+}
+
+.menu__button--active::before {
+  content: "";
+  background-color: steelblue;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  position: absolute;
+  left: 0;
 }
