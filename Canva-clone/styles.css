@@ -292,17 +292,26 @@ header > img {
 .canvas {
   height: 57vh;
   width: 48vw;
+  position: relative;
 }
 
 .canvas__bg-img {
+  /* display: none; */
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0.15;
 }
 
 .canvas__fg-img {
   height: 75%;
   width: 78%;
-  border-radius: 10px  ;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  border-radius: 10px;
   object-fit: cover;
+  transform: translate(-50%, -50%);
 }
+
+/* 9:18 */
