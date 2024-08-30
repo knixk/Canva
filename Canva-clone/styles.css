@@ -301,6 +301,7 @@ header > img {
   width: 100%;
   object-fit: cover;
   opacity: 0.15;
+  border-radius: 10px;
 }
 
 .canvas__fg-img {
@@ -315,3 +316,18 @@ header > img {
 }
 
 /* 9:18 */
+
+/* artbox */
+.artboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 55px - 57px);
+  transform: translateY(-40px);
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
