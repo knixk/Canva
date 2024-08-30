@@ -280,6 +280,7 @@ header > img {
   color: white;
   height: 40px;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .button:focus,
@@ -288,7 +289,6 @@ header > img {
 }
 
 /* canvas */
-
 .canvas {
   height: 57vh;
   width: 48vw;
@@ -321,6 +321,7 @@ header > img {
 .artboard {
   display: flex;
   justify-content: center;
+  column-gap: 10px;
   align-items: center;
   height: calc(100vh - 55px - 57px);
   transform: translateY(-40px);
@@ -329,5 +330,70 @@ header > img {
 .tools {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   /* justify-content: space-around; */
+}
+
+/*  */
+
+.canvas__circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  animation: fade-in 1s 1s backwards;
+}
+
+.canvas__circle:nth-of-type(1) {
+  top: 11.5%;
+  left: 10.4%;
+  cursor: nw-resize;
+}
+
+.canvas__circle:nth-of-type(2) {
+  top: 11.5%;
+  right: 10.4%;
+  cursor: sw-resize;
+}
+
+.canvas__circle:nth-of-type(3) {
+  bottom: 11.5%;
+  left: 10.4%;
+  cursor: nw-resize;
+}
+
+.canvas__circle:nth-of-type(4) {
+  bottom: 11.5%;
+  right: 10.4%;
+  cursor: sw-resize;
+}
+
+.tool {
+  background-color: #E1E6E9;
+  height: 44px;
+  width: 44px;
+  border-radius: 8px;
+  color: #404446;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.tool--active {
+  background-color: #2B363B;
+  color: #fff;
+}
+
+.tool:last-child {
+  margin-top: auto;
+}
+
+.tool:hover,
+.tool:focus {
+  background-color: #2B363B;
+  color: #fff;
+}
+
+.tool__icon {
+
 }
