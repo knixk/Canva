@@ -1,7 +1,7 @@
 /* 24:10 */
 
 * {
-  border: 1px solid plum;
+  /* border: 1px solid plum; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -282,7 +282,27 @@ header > img {
   transition: 0.5s;
 }
 
-
-.button:focus, .button:hover {
+.button:focus,
+.button:hover {
   background-color: #294792;
+}
+
+/* canvas */
+
+.canvas {
+  height: 57vh;
+  width: 48vw;
+}
+
+.canvas__bg-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.canvas__fg-img {
+  height: 75%;
+  width: 78%;
+  border-radius: 10px  ;
+  object-fit: cover;
 }
