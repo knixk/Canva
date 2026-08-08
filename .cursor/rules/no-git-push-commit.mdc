@@ -1,0 +1,10 @@
+---
+description: Block git push and commit unless user says codeword lion
+alwaysApply: true
+---
+
+# Git Push & Commit Gate
+
+- NEVER run `git commit`, `git push`, or create PRs unless the user explicitly says the codeword **lion**.
+- Local edits, staging (`git add`), and other non-commit git commands are fine.
+- If asked to commit or push without **lion**, remind them of the codeword and wait.

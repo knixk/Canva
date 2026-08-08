@@ -145,6 +145,89 @@ header > img {
   background-color: #2b363c;
   width: 350px;
   padding: 20px;
+  transition: width 0.25s ease, padding 0.25s ease;
+  overflow: hidden;
+}
+
+.panel--collapsed {
+  width: 0;
+  padding: 0;
+}
+
+.panel__collapse-btn {
+  cursor: pointer;
+  color: inherit;
+}
+
+.panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel__body .template-card + .template-card,
+.panel__body .shape-btn + .shape-btn {
+  margin-top: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.field input[type="text"],
+.field input[type="color"] {
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.template-card,
+.shape-btn {
+  background-color: #4c5960;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.template-card:hover,
+.shape-btn:hover {
+  transform: scale(1.02);
+}
+
+.template-card small {
+  display: block;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.template-card__preview {
+  display: block;
+  background: linear-gradient(135deg, #18a0be, #622db9);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.template-card__preview--square {
+  height: 80px;
+}
+
+.template-card__preview--story {
+  height: 120px;
+  width: 68px;
+}
+
+.template-card__preview--cover {
+  height: 56px;
+}
+
+.shape-btn--clear {
+  background-color: #8b3a3a;
 }
 
 .panel__top {
@@ -303,7 +386,58 @@ header > img {
 .canvas {
   height: 57vh;
   width: 48vw;
+  max-width: 100%;
   position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.canvas__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.canvas[data-shape="circle"] .canvas__overlay {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.25) 35%,
+    transparent 36%
+  );
+}
+
+.canvas[data-shape="bar"] .canvas__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45) 28%,
+    transparent 28%
+  );
+}
+
+.canvas[data-shape="frame"] .canvas__overlay {
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+.canvas__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  pointer-events: none;
+}
+
+.canvas__heading {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.canvas__sub {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .canvas__bg-img {
